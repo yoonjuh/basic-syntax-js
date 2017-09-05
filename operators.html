@@ -1,0 +1,27 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script type="text/javascript">
+        alert(1=='1'); //true
+        alert(2==2); //true
+        alert('1'=='2');//false
+        alert('2'=='2');//true
+        alert(1==='1');//false
+        alert(1===2);//false
+        alert('1'==='2');//false
+        alert('2'==='2');//true
+        // javascript에서는 주로 ===이것을 사용한다 ==이것은 1 == '1'처럼 
+        //데이터 타입이 다른 데이터를 같은 것으로 인식 하기 때문에 나중에 버그를
+        //발생 시킬 가능성이 높다 
+        alert(null==undefined);//true
+        alert(null===undefined);// false
+        //null은 프로그래머가 의도적으로 변수의 값이 없음을 지정한 것이고 
+        //undefined는 말 그대로 값이 없으므로 이 둘은 엄연히 다른 얘기이다
+        //데이터 타입조차 다르다
+    </script>
+</body>
+</html>
