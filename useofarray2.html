@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            function get_members(){
+                return ['edwin','jay','sun','jun'];
+            }
+               var members = get_members();
+
+                document.write(members[0].toUpperCase()+"<br />");
+                document.write(members[1].toUpperCase()+'<br />');
+                document.write(members[2].toUpperCase()+'<br />');
+                document.write(members[3].toUpperCase()+'<br />');
+
+            /*========================================== 
+            Too much codes to write and a lot of things to do when you fix the codes*/
+
+            function get_members1(){
+                return ['edwin','jay','sun','jun'];
+                
+            }
+
+            var members1 = get_members1();
+
+            for(var i = 0; i < members1.length; i++){
+                document.write(members[i].toUpperCase()+"<br />");
+            }
+
+            members1 = get_members1();
+
+
+
+        </script>
+    </body>
+</html>
