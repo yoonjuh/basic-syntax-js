@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <style>
+            body{
+                font-family: sans-serif;
+                font-size:14pt;
+                margin: 0 auto;
+                text-align: center;
+                width: 680px;
+            }
+
+            table {
+                margin: 0 auto;
+            }
+
+            td {
+                border: 1px solid darkblue;
+                width: 50px;
+                height: 50px;
+                font-size: 1.6rem;
+                font-family: sans-serif;    
+            }
+
+            tr:first-child td {
+                border-top: none;
+            }
+
+            tr:last-child td {
+                border-bottom: none;
+            }
+
+            td:first-child {
+                border-left: none;
+            }
+
+            td:last-child { 
+                border-right: none;
+            }
+
+            #message {
+                background-color: #f9ecf2;
+                border: 1px solid #660066;
+                border-radius: 5px;
+                box-shadow: 1px 1px 5px black,-1px -1px 5px white;
+                display: none;
+                font-weight:bold;
+                height: 30%;
+                margin: 0 auto;
+                padding: 20px;
+                position: relative;
+                top: 50px;
+                width: 80%;
+                z-index: 200;
+            }
+
+            #overlay {
+                background-color: rgba(20, 20, 20, 0.4);
+                display:none;
+                height:100%;
+                left: 0;
+                position: fixed;
+                top: 0;
+                width: 100%;
+                z-index: 100;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Tic Tac Toe!</h1>
+        </header>
+        
+        <table>
+            <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+            </tr>
+        </table>
+
+        <p>
+            Player <span id="player">X</span> GO!
+        </p>
+
+        <footer>
+            Edwin @ Sheridan STST10049 Web Programming  
+        </footer>
+
+        <div id='message'>
+            <p>GAME OVER!</p>
+            <h3 id="winner"></h3>
+            <p>&mdash;click anywhere in the box to dismiss this message&mdash;
+            </p>    
+        </div>
+        <div id='operlay'></div>
+        <script>
+            var board = document.getElementsbyTagName("td");
+
+            var winSets = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6],
+            [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]];
+
+            var player = "X";
+
+            var empty = 9;
+
+            var gameOver = false;
+
+            /* Function resetGame() is called when user clicks in the "game reset"
+            button
+            1. sets content of all 9 cells to nothing
+            2. sets the starting player ( this version, X always starts first)
+            3. uodates the message to the current player
+            4. resets the number of empty sells to 9
+            5. sets the game over flag to false to indicate that the game is in 
+            progress    
+            */
+            
+            function resetGame() {
+                for ( i = 0; i < board.length; i++ ){
+                    board[i].innerHTML = "";
+                }
+                console.log("resetGame");
+            }
+
+            function cellClicked(cell) {
+                cell.innerHTML = player;
+                checkWin();
+                player = (player === "X") ? "O" : "X";
+                document.getElemntByID("player").innerHTML = player;
+            }
+
+            function checkWin(){
+                for ( i = 0; i < winSets.length; i++) {
+                    if (board[winSets[i][0]].innerHTML == board[winSets[i][i]].innerHTML
+                    && board[winSets[i][1]].innerHTML == board[winSets[i][2]].innerHTML
+                    && board[winSets[i][0]].innerHTML != "") {
+
+                    console.log("We have a winner!");
+                }
+            }
+            }    
+            document.getElementById("reset").addEventListener("click", resetGame);
+            document.getElementById("message").addEventListener("click", function() {
+            displayWin(false);
+            });
+            for ( i = 0; i < board.length; i++) {
+            document.getElementsByTagName("td")[i].addEventListener("click", function() {
+            cellClicked(this);
+            });
+            }
+            // displays the results window with the winner inside it: the method will
+            // either show the results or hide them (displayWin(true) shows and
+            // displayWin(false) hides)
+            function displayWin(show) {
+                if (show) {
+                    document.getElementById("message").style.display = "block";
+                    document.getElementById("overlay").style.display = "block";
+                } else {
+                    document.getElementById("message").style.display = "none";
+                    document.getElementById("overlay").style.display = "none";
+                }
+            }
+
+
+        </script>
+
+
+    </body>
+
+</html>
