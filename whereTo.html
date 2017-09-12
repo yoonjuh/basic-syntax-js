@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+
+        <h1>Where to put Javascript?</h1>
+
+        <p id='demo'>A Paragraph.</p>
+
+        <button type='button' onclick = "myfunction()">Try to Click me</button>
+
+        <script>
+            
+            function myfunction(){
+                document.getElementById('demo').innerHTML = "Hello, world!"
+            }
+
+
+
+
+        </script>
+        <!--Javascript can be placed either on <head>section and on body section.
+            Let's think there are a lot of lines of code, In that case, 
+        If you put your <scripnt> tag on head section may give user to 
+            slow experience. THus usually. we can put script tag on the body 
+        section</head> -->
+    </body>
+</html>
