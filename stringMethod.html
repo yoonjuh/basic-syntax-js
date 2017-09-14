@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        
+        <script>
+            
+            var text = "Find me if you can, me can also be here";
+            console.log(text.length);
+    
+            console.log('me word is at position -' + text.indexOf('me'));
+
+            console.log('me word is at position -' + text.lastIndexOf('me'));
+
+            console.log('me word is at position -' + text.search("me"));
+            /* The difference between length and search is that "search has more 
+            power" Abhay said */
+
+            //slice(start,end);
+            var fruits = 'Apple, Banana, Kiwi';
+
+            console.log('slice in action - ' + fruits.slice(7,13));//Banana
+
+            console.log('slice in action with negative param - '
+            + fruits.slice(-12, -6)); //Banana, Count the String data from the end
+
+            /* substring(start,end); very simular with slice. 
+            The only different thing isit won't take negative parameter*/
+            console.log('substring in action - '+ fruits.substring(7,13));//Banana
+            
+            //substr(start, length);
+            /* substr is very simular with slice. but when you use this method 
+            you should give start and the number of charactor I want(instead of end)
+            */
+            console.log('substr in action -' + fruits.substr(7,6));// Banana
+
+
+            //Replace contents 
+            var fruitsUpgrade = fruits.replace('Kiwi','Oranges');
+            console.log('replace in action -' + fruitsUpgrade);
+
+            var you = text.replace("me",'you');
+            console.log('replace in action -' + you); /*  it only applys the first 
+            so If you want to replace all of the 'me' word then you can 
+            say ex) var you = text.replace(/me/g,'you'); /word/g is the regular
+            expression I will learn later on time. One more thing, 
+            I cannot replace the whole string once and for all it(original) always be there
+            */
+            //toLowerCase or toupperCase
+            console.log(text.toLowerCase());
+            console.log(text.toUpperCase());
+
+            //concat
+            var x = "Hello" ;
+            var y = "World" ;
+            var z = x.concat(" ",y);
+            var z1 = x + " " + y;
+            console.log(z,z1);
+
+            //Extraction String Characters
+            console.log("test charAt" + x.charAt(1));
+            console.log("test charCodeAt -" +x.charCodeAt(1)); //Uni code
+            // this is like a Stringtokenizer at Java
+            var fruitsArray = fruits.split(',');
+            console.log(fruitsArray); //this method splits data based on , 
+            console.log(fruits.split(' ')); // another way to do this, based on space (' ');
+            console.log(fruits.split('a')); //based on 'a';
+            console.log(fruits.split('')); //this will split every single word
+
+
+
+
+
+
+        </script>
+
+    </body>
+</html>

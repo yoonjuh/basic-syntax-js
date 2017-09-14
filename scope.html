@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>  
+        <h1>Scope</h1>
+        <p id ="demo">In this lecture, we will go over the scope</p>
+        
+        <p id ="globalScope"></p>
+        
+        <script>
+            var name;
+            function myfunction(){
+                name = 'abhay';
+                console.log(" From within the function "+ name);
+            }
+            function myfunction2(){
+                name = 'john';
+                console.log(' From within the function ' + name);
+            }
+            
+            myfunction();
+            myfunction2();
+            myfunction();
+            console.log(name);
+
+            document.getElementById('globalScope').innerHTML = 'I can display '
+            + window.name;
+            
+
+
+
+
+
+
+
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>Numbers</h1>
+
+        <p id='demo'>In this lecture we wiil cover Numbers.</p>
+
+        <script>
+            
+            var x = 34.00; // A number with decimals 
+            x = 34; // A number without decimals
+
+            x = 123e5; //12300000
+            x = 123e-5; //0.00123
+
+            /* Javasctipy numbers are always 65 bit float type
+
+            */
+
+            //            0-51 --- number
+            //            52 -62 --- exponent
+
+            var x1 = 999999999999999;// 15times 9
+            var x2 = 9999999999999999; //16times 9 
+            console.log(x1,x2);
+             
+            var x3 = 0.2 + 0.1;
+            console.log(x3); // Javascropt has some weird point in decimal numbers
+
+            var x4 = (0.2*10 + 0.1 *10)/10;
+            console.log(x4); // but now it's accurate
+
+            //Binary - 2
+
+            //Hexadecimal - 16 
+
+            //Octal - 8
+
+            //Decimal - 10
+            var x5 = 128;
+            console.log('Hexadecimal value is -' + x5.toString(16));
+            console.log('Octal value is - ' + x5.toString(8));
+            console.log('Binary value is -' + x5.toString(2));
+
+
+            // 255
+
+            var hexa = 0xFF;
+            console.log('Decimal value is -' + hexa.toString(10));
+
+            //Infinity 
+            var x6 = 2/0;
+            console.log('Infinity test -' + x6);
+            console.log(typeof Infinity);
+
+            //NaN - not a Number  
+
+            var x7 = 100/'Hundred';
+            console.log(x7, isNaN(x7));
+
+            var x8 = 100/'100';
+            console.log(x8,isNaN(x8));
+
+            var x9 = NaN;
+            var x10 = '5';
+            var x11 = x9+x10;
+            console.log(x11);
+
+            console.log(typeof NaN);
+
+            //Numbers can be Objects
+
+            var x12 = new Number(10);
+            var x13 = 10;
+
+
+
+
+
+
+        </script>
+
+    </body>
+</html>

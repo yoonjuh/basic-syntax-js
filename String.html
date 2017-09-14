@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+
+        <h1>String</h1>
+
+        <p id='demo'>In this lecture, we will cover Strings.</p>
+
+        <script>
+        
+            var text = "\"it\'s alright\" said John Doe";
+
+            // we can use '\' as a escape provider
+            var text2 = "qwertyutttrewdff qwererettuityreweetrtyyukytgrfdfg" +
+            "weqrtyukukjygfdsdfhjgrfewertdyguh";
+            var text3 = "John Doe"; //typeof String
+            var x = new String("John Doe"); // typeof Object
+            
+            console.log(text3 + " - " + typeof text3);
+            console.log(x + " - " + typeof x);
+            console.log("x == text3 => " + + (x == text3));
+            console.log("x === text3 => " + (x === text3));
+            var y = new String("John Doe");
+            console.log("x == y => "+ (x == y));
+            console.log("x === y => "+ (x === y)); 
+            /* comparing objects ( new String();) is not possible 
+             Thus, it is better not to use new String(); more than once in one
+            document */
+
+            console.log(text, typeof text);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        </script>
+
+
+
+
+
+
+
+
+
+
+    </body>
+
+</html>
