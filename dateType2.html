@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>Functions</h1>
+        <p>Today we will learn Functions</p>
+
+    <script>
+        
+        var x = ( 2 * 3) + 5;
+        var y = 3 * 4;
+
+        function myFunction(num1,num2){
+            var a = num1 * num2;
+            var b = num1 + num2;
+           return(a + b);
+
+        }
+
+        // myFunction(2,3) This is how to call mathod or ==>
+
+        var result = myFunction(2,3);
+        console.log(result);
+
+
+        // Also I can use A Function as a variable
+        //var result2 = myFunction(3,4);
+        console.log(myFunction(3,4));
+
+        
+
+        function toCelcius(f){
+            return (5/9) * (f-32);
+        }
+
+        console.log("THe temperature is " + toCelcius(10));
+        
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+    </body>
+    
+    
+</html>
