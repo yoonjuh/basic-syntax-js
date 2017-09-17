@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+
+        <h1>Arrays</h1>
+
+        <p id='demo'>In this lecture, we will cover Arrays</p>
+
+        <script>
+
+        var cars = ['Merc',
+                    'BMW',
+                    'Fiat'];
+        cars.push('Volvo');
+        console.log(cars[3]);
+        console.log(cars, typeof cars);
+
+        var cars2 = new Array('Nissan', 'Subaru',
+        'Chevy');
+        console.log(cars2);
+
+        var person = {firstName: 'John', lastName: 'Doe'};
+        console.log(person.firstName);
+
+        var mixedArray = [];
+        mixedArray[mixedArray.length] = new Date('12/12/2017');
+        mixedArray[1] = function myFunction(){
+        };
+        console.log(mixedArray);
+        mixedArray[mixedArray.length] = cars;
+
+        console.log(cars.length);
+        console.log(cars.sort());
+        
+        for(i = 0; i<cars.length; i++){
+            console.log(cars[i]);
+        }
+        
+        var namedArray = [];
+        // namedArray['firstName'] = 'John'; This is not working at Javascript
+        // the Array of Javascript uses index, not a name
+        namedArray[0] = 'John'; // Like this 
+        console.log(namedArray);
+
+        var iAmAVar = 'Hey there';
+        console.log(Array.isArray(iAmAVar));    
+        console.log(cars instanceof Array);
+        
+        
+        </script>
+
+
+    </body>
+</html>
