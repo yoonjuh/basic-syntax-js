@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+    </head>
+    <body>
+        
+        <h1>Object Methods</h1>
+        <p id='demo'>In this lecture, we will cover the Object Methods</p>
+                
+        <script>
+        //methodName : function() {code lines}
+
+        //objectName.methodName();
+
+        var person = {
+            firstName: 'John',
+            lastName: 'Doe',
+            age: 30,
+            eyeColor: 'blue',
+            fullName: function(){
+                return this.firstName+ " " + this.lastName;
+            }
+        }
+
+        console.log(person.fullName());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <h1>Object Properties</h1>
+        <p id="demo"></p>
+
+        <script>
+        
+            var person = {
+                firstName: 'John',
+                lastName: 'Doe',
+                age: 30,
+                eyeColor: 'blue'
+            };
+
+            // Add, Change, delete
+
+            //1 - objectName.property //  person.firstName
+            
+            //2 - objectName['property'] // person['firstName'];
+
+            //3 = objectName[expression] // var x = 'age'; person[x] ;
+
+            var x = 'age';
+
+            console.log(person.firstName);;
+            console.log(person['lastName']);
+            console.log(person[x]);
+        
+        /*
+            for (variable in object){
+                code to be executed
+            }
+        */
+
+        var text = ""; 
+        for(y in person){
+            text += person[y];
+            text += " ";
+        }
+        console.log(text);
+
+        person.nationality ="English"; // Add property and value
+
+        console.log(person.nationality);
+
+        delete person.age; // delete property and value
+
+        console.log(person);
+        
+        
+        // Numberable, configurable and writeable ??????
+        
+        
+        
+        
+        </script>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+
+        <h1>Boolean</h1>
+
+        <p id='demo'>In this lecture, we will cover Boolean values.</p>
+
+        <script>
+        // All Real values will return true
+        console.log('-------------- Real Values ---------------');
+        console.log(Boolean(100));
+        console.log(Boolean(3.14));
+        console.log(Boolean(-5));
+        console.log(Boolean(2+3+5));
+        console.log(Boolean(1000<1001));
+        console.log(Boolean('Hello'));
+        console.log(Boolean("false"));
+
+        console.log('----------- Non Real Values --------------');
+        var x =0;
+        console.log(Boolean(x));
+        var x =-0;
+        console.log(Boolean(x));
+        var y;
+        console.log(Boolean(y));
+        console.log(Boolean(null));
+        x = 10 * "H" //NaN
+        console.log(Boolean(x));
+
+
+
+
+
+
+
+
+
+        </script>
+    </body>
+</html>

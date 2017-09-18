@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+
+        <h1>Pass by value & Pass by Reference</h1>
+
+        <p id='demo'>In this lecture, we will cover the <b>
+            Pass by Value & Pass by Reference</b></p>
+
+
+        <script>
+           /* function changeValue(item){
+                console.log('item = '+item);//Third, x is 1 so far
+                item = 2;// now the value of item has updated
+                console.log('item = '+item);//forth, so x is 2 
+            }
+        
+            var x =1;
+            console.log(x); => This is the first codes to be executed so x is 1
+            changeValue(x); => This is second codes 
+            console.log(x); => last one to be executed 
+            but x is 1, that means even though x had updated but that's applus 
+            only inside of function, I think this is what people call pass by value
+
+            
+            */
+            function changeValue(item){
+                console.log('item = '+item);//Third, X is 1 
+                item = {value: 2};//Forth, as pass by value, it was expected to be updated 
+                // but JS reads that codes as a new property and value so It doesn't work like this 
+                // pass by reference ? so I guess this(declaring property and value) is called as pass by reference 
+                // because the declaration has added new property and value ( item = {value: 2})
+                console.log('item = '+item);
+            } 
+            var x = {value: 1}; //starts, X is 1
+            changeValue(x); //second, x is passed to inside of function as a value
+            console.log(x.value);
+            /* x
+            and 
+            
+
+
+
+
+
+
+
+
+
+
+
+        
+        </script>
+
+    </body>
+
+</html>

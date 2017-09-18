@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>Objects</h1>
+        <p id='demo'>In this lectrue We will cover the Objects (In Detail)</p>
+
+
+    <script>
+        //Objects in JS
+
+        // Booleans
+            var x1 = new Boolean();
+        // Numbers
+            var x2 = new Number();
+        // Strings
+            var x3 = new String();
+        // Dates 
+            var x4 = new Date();
+        // Maths 
+        
+        // Regular Expressions
+            var x5 = new RegExp();
+        // Arrays
+            var x6 = new Array();
+        //Functions
+            var x7 = new Function();
+        // Objects
+            var x8 = new Object();
+
+           var personS = "John Doe";
+           var person = {firstName: 'John',
+                          lastName: 'Doe', 
+                          age: 30,
+                          eyeColor: 'blue',
+                          fullName: function(){
+                              return this.firstName +" "+this.lastName;
+                          }
+                          };
+
+        //=========== Primitives IN JS ===========================
+
+        //string
+        //boolean
+        //number
+        //null
+        //undefined
+
+
+        // Object Literal
+        var personSmarter = {firstName:'John',
+                             lastName: 'Doe',
+                             age: 30,
+                             eyeColor: 'blue'};
+
+        // new Keyword
+        var personSmarterThanSmarter = new Object();
+        personSmarterThanSmarter.firstName ='John';
+        personSmarterThanSmarter.lastName = 'Doe';
+
+        //Constructor
+        function personK(first,last,age,eye){
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+            this.eye = eye;
+        }
+
+        var mother = new personK('Jenny', 'Doe', 70, 'black');
+        var father = new personK('Jim', 'Doe', 70, 'black');
+
+
+        console.log(mother,father);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+    </body>
+</html>
