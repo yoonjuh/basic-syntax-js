@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        <h1>Switch Statements</h1>
+        <p id='demo'>In this lecture we will cover
+            the conditional statement(Switch)</p>
+
+        <p id=defaultDay></p>
+        <p id=defaultDay2></p>
+        <input id="myInput"type='text' value='MERC'>
+        <button onclick="checkCar()">Check Car</button>
+        <p id="car"></p>
+
+        <script>
+
+         /* switch(expression) {
+            case n:
+            code block;
+                 break;
+            case n:
+                code block;
+                break;    
+            case n:
+                code block;
+                break;
+            }    */
+        
+        var day;
+        switch (new Date().getDay()) {
+            case 0:
+                day = "Sunday";
+                break;
+            case 1:
+                day = "Monday";
+                break;
+            case 2:
+                day ="Tuesday";
+                break;
+            case 3:
+                day ='Wednesday';
+                break;
+            case 4:
+                day ="Thursday";
+                break;
+            case 5:
+                day ="Friday";
+                break;
+            case 6:
+                day ="Saturday";
+                break;
+        }
+        document.getElementById('demo').innerHTML = day;
+
+        var defaultDay;
+
+        switch (new Date().getDay()) {
+
+            case 0:
+                defaultDay = "This is a Sunday";
+                break;
+            case 6: 
+                defaultDay = "This is a Saturday";
+                break;
+            default: 
+                defaultDay = " Looking forward for the weekend!";
+                
+        }
+        document.getElementById("defaultDay").innerHTML = defaultDay;
+        
+        var defaultDay2 ;
+
+        switch (new Date().getDay()) {
+            case 1:
+            case 2:
+            case 3: 
+            default:
+                defaultDay2 = "Looking forward for weekend!";
+                break;
+            case 4:
+            case 5: 
+                defualtDay2 =" Soon it is weekend!";
+                break;
+            case 0:
+            case 6: 
+                defaultDay2 ="It is Weekend!!!";
+                break;
+        
+        
+        
+        }
+        document.getElementById('defaultDay2').innerHTML = defaultDay2;        
+        
+        
+
+        function checkCar(){
+            var text;
+            var favCar = 
+            document.getElementById('myInput').value;
+            console.log(favCar)
+
+            switch (favCar) {
+                case "BMW":
+                    text = "This is German Car"
+                    break;
+                case "MERC":
+                    text = 'This is also German Car'
+                    break;
+                case "Hyundai":
+                    text = "THis is Korean Car"
+                    break;
+                case "Ford":
+                    text = "This is American Car"
+                    break;
+                default: 
+                    text = "Unknown Car"
+
+            }
+            document.getElementById('car').innerHTML = text;
+        }
+    
+
+
+
+
+
+        
+        
+        
+        </script>
+
+
+
+
+    </body>
+</html>

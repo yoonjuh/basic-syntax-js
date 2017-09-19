@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <input id='myInput' type="text" value="Merc">
+        <button onclick="checkCar()">CheckCar</button>
+        <p id='car'></p>
+
+
+        <script>
+        
+        function checkCar() {
+            var text;
+            var favCar = document.getElementById('myInput').value;
+
+            switch (favCar) {
+                case "Merc":
+                    text = 'German Car';
+                    break;
+                case "Ford":
+                    text = 'American Car';
+                    break;  
+                case "HyunDai":
+                    text = "Korean Car"
+                    break;
+                default:
+                    text ="Unknown Car"
+
+            }
+            document.getElementById('car').innerHTML = text;
+        }
+        
+        
+        
+        
+        
+        
+        
+        </script>
+
+        
+
+
+
+
+
+
+    </body>
+</html>
