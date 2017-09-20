@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1> Loops - WHile loop</h1>
+
+        <p id='demo'>In this lecture, we will cover the while loop</p>
+        <script>
+        /* 
+            while(condition) { 
+                execute block of code
+            }
+        */
+
+        var i =0;
+
+        while ( i < 10) {
+            console.log(i);
+            i++;    
+        }
+
+        //Do while 
+
+        var i = 11;
+        do { 
+            console.log(i);
+            i++;
+        } while (i < 10);
+        // This is the shape of th Do while loop
+        // it does something while condition but you have to know do while does 
+        // at least once even if it doesn't make sense
+
+        // There is no difference between while and for in terms of function
+        // but while loop has a different shape of code from the for loop
+        // the first condition(i = 0;) is located outside of the loop 
+        //and the third condition(i++) is located inside of loop
+
+        var z =5;
+
+        while (z < 5) {
+            document.getElementById('demo').innerHTML += z + "<br>";
+            z+=5;
+        }
+    </script>
+
+    </body>
+</html>

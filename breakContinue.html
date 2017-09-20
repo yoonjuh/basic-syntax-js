@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>Break and Continue</h1>
+        <p id="demo">In this lecture, we will cover the Break and Continue</p>
+
+        <script>
+            console.log('break------------------------------')
+            var text = "";
+            for(i = 0; i<10; i++){
+                
+                if (i == 3) {
+                    break;
+                }
+                text = text + i + ",";
+            }
+            console.log(text);
+            // for(i = 0; i<10; i++){
+                
+            //     if (i == 3) {
+            //         break;
+            //     }
+            //     console.log(i);
+            // }
+            // This will not display 3. Because the loop already stopped 
+            text = "";
+            console.log("Continue -----------------------------")
+            for(i = 0; i < 10; i++){
+                
+                if (i == 3) {
+                    continue;
+                }
+                text = text + i + ",";
+            } 
+            console.log(text);
+            // This will not display only 3 and keep go on until it stops
+        
+        /* Lables 
+           Name: {}
+            */
+            var cars = ["BMW", "MERC", "Ford",'Honda'];
+            list: {
+                text += cars[0];
+                text += cars[1];
+                text += cars[2];
+                break list;
+                text += cars[3];
+                text += cars[4];
+                text += cars[5];
+                text += cars[6];
+                text += cars[7];
+                text += cars[8];
+
+            }
+            console.log(text);
+        
+        
+        
+        
+        </script>
+
+
+
+    </body>
+</html>
