@@ -14,14 +14,13 @@
             background: red;
             position: absolute;
         }
-        #anotherAni {
+        #anotherAni{
             width: 50px;
             height: 50px;
-            background: red;
+            background: green;
             position: absolute;
-            left: 0;  
-
         }
+       
         
         
         
@@ -33,9 +32,11 @@
 
         <p id="demo">In this lecture, we will cover the animations.</p>
 
-        <button onclick="moveOn()" onclick="moveOn2()">Move On</button>
+        <button onclick="moveOn()">Move On</button>
+        <button onclick="moveOn2()">Move On</button>
         <br>
         <br>
+        
 
 
         <div id="container">
@@ -48,6 +49,7 @@
         function moveOn() {
             var smallBox = document.getElementById('animate');
             var pos = 0;
+            
             var myInterval = setInterval(frame,10);
             function frame() {
                 if (pos == 250) {
@@ -61,18 +63,26 @@
             
          }
          function moveOn2() {
-             var smallBox2 = document.getElementById('anotherAni');
-             var posit = 200;
-             var myInterval1 = setInterval(frame2,10);
-             function frame2() {
-                 if(posit == 50){
-                     clearInterval(myInterval1)
-                 }
-                 posit--;
-                 smallBox.style.left = posit + "px";
-                 smallBox.style.right = posit + "px";
-             }
+            var smallBox2 = document.getElementById('anotherAni');
+            var pos1 = 250;
+            var myInterval2 = setInterval(frame2,10);
+            function frame2() {
+                if (pos1 == 0   ) {
+                    clearInterval(myInterval2);
+                    
+                }
+            
+                pos1--;
+                smallBox2.style.right = pos1 + "px";
+                smallBox2.style.top = pos1 + 'px'; 
+                smallBox2.style.bottom = pos1 + "px";
+                
+
+            }
          }
+            
+         
+         
 
 
 
