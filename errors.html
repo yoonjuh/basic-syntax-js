@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <h1>Javascript Errors</h1>
+
+        <p id="deno">In this lecture, we will cover the Javascript Errors.</p>
+
+        <input id="example" type="text">
+        <button type="button" onclick="myFunction()">Test Input</button>
+        <p id="message">Message will be display here</p>
+        <p id="finally"></p>
+        <!-- <input id="example2" type="number" min="5" max="10" step="1"> -->
+
+        <script>
+        /*
+        try {
+            some code
+        } catch() {
+            Block of code to handle error
+        }
+        */
+        function myFunction() {
+            var message,x;
+            message = document.getElementById("message");
+            message.inHTML = "";
+
+            x = document.getElementById("example").value;
+
+            try {
+                if(x == "") throw "empty";
+                if(isNaN(x)) throw " Not a number";
+                x = Number(x);
+                if(x < 5) throw "Too Low";
+                if(x > 12) throw " Too High";
+            } catch(err) {
+                message.innerHTML = "Input is " + err;
+            } finally {
+                document.getElementById('finally').innerHTML = "Finally Executing"
+            }
+        }
+
+
+
+
+
+
+
+
+        // try {
+        //     alertx("Welcome Students!");
+        // } catch(err) {
+        //     document.getElementById('demo').innerHTML =
+        //     console.log(err.message);
+        // }
+        
+        
+        
+        
+        
+        
+        
+        </script>
+
+
+
+
+
+
+    </body>
+</html>

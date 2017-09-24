@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>DOM - EventHandlers</h1>
+            
+        <p id="demo">In this lecture, we will cover the DOM event EventHandlers</p>
+
+
+            <button id="clickMe">Click Me</button>
+            <p id="windowTest"></p>
+        <script>
+
+
+            /*addEventListner();
+            EX) element.addEverListener(event, function, useCapture );*/
+            //removeEventListener();
+            
+        var elem = document.getElementById('clickMe');
+     // elem.addEventListener('click',function() {alert('Hello World')})
+        elem.addEventListener('click', callMyFunction);
+        // in this code, when you call callMyFunction, you don't have to write () after function name because javasacript expects a function on that spot
+        // also, about the 'click' part, I don't have to write onclick or onmouseover because javascropt know that the types of action
+        elem.addEventListener("click",callMyFunction2);
+        elem.addEventListener('mouseover',callMyFunction3);
+        function callMyFunction() {
+        alert('Hello world!');
+        }
+        function callMyFunction2(){
+            console.log("you are alerted!!");
+        }
+        function callMyFunction3(){
+            console.log('Get Off Me');
+        }
+
+        window.addEventListener('resize',callResize);
+        function callResize() {
+            document.getElementById("windowTest").innerHTML = Math.random();
+        }
+       
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        </script>
+    </body>
+</html>

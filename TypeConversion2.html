@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>Type Conversion</h1>
+
+        <p id="demo"></p>
+        <script>
+
+            //toString, String()
+
+            console.log('------------ Number to String -------------');
+
+            var x = 10;
+            console.log(String(x)+", "+x.toString());
+            console.log(String(123)+", "+(123).toString());
+            console.log(String(123+3)+", "+(123+3).toString());
+
+            console.log('------------ boolean to String ------------');
+        
+            console.log(String(false));
+            console.log(true.toString());
+
+            //Date to String
+
+            console.log('----------- Date to String ------------------')
+            console.log(String(new Date('1/1/2018')));
+            console.log(new Date(1/7/2018).toString());
+
+            // String to number
+
+            console.log('---------- String to Number-----------------')
+            console.log(Number('123'));
+            console.log(Number(' '));
+            console.log(Number(''));
+            console.log(Number("10 20"));
+
+
+            var y = 15;
+            var x = + y;
+            console.log(x);
+
+
+            y = "John";
+            x = +y;
+            console.log(x);
+
+            //Boolean to Number
+            console.log(Number(false));
+            console.log(Number(true));
+
+            //Date to Number
+            console.log('------------- Date to Number ---------------');
+
+            console.log(Number(new Date('1/1/2018')));
+
+            //Automatic Type Conversion
+
+            console.log('---------- Automatic Type Conversion ---------');
+
+            console.log(5 + null);
+            console.log("5" + null);
+            console.log('5' + 2); // javascript automatically convert number2 to string because of +
+            console.log('5' - 2);// but - * / these are different this would be number 
+            console.log('5' * '2')//because there is no * in String section so javascript automatically convert that into number
+
+
+            console.log('------------- ex-----------');
+
+            console.log(Number("1.1"));
+            console.log(String(123));
+            console.log(4.11.toString());
+            console.log(Number(false));
+            console.log(String(false));
+            console.log("5" * "5"); 
+            console.log(typeof('5' + 5) + ('5' + 5));//String
+            console.log(Number(""));
+            console.log(typeof Number(" ")); // number
+            console.log(Number(true));
+        
+        
+        
+        
+        
+        
+        
+        </script>
+    </body>
+</html>
