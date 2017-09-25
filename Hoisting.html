@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>Hoisting</h1>
+        <p id="demo">In this lecture, we will cover the Hoisting.</p>
+        <p id="replaceCon1"></p>
+        <p id='example'></p>
+        <p id="replaceCon2"></p>
+        <p id= "sum"></p>
+        <p id="demo1"></p>
+
+        
+        <script>
+
+            // hoisting is javascript's default behavior
+            // moving declaration to the top    
+            document.getElementById("replaceCon1").innerHTML =
+             "----------- hoisting ------------";
+           
+            x = 5; //Asigned value to x - initialization;
+
+            elem = document.getElementById('example');
+            elem.innerHTML = x;
+
+            var x;
+
+            document.getElementById('replaceCon2').innerHTML =
+            "---------- hoisting2 ------------";
+            var a = 5;
+            b = 10; //Initialization
+
+            elem = document.getElementById('sum');
+            elem.innerHTML = a + b;
+
+            var b ; // declaration
+            /* I initiate b's value first before i declare b  the reason why this works 
+             =>  because of hoisting// hoisting means 
+            when the javascript execute codes, by default behavior of javascript, it moves the declarations to the top of codes
+            */ 
+            var q = 1;
+
+            var z = q * w;
+            document.getElementById('demo1').innerHTML = z;
+            
+            var w = 3; /* this is not going to work be cause javascript will move only declarations
+            but not initialization, and var w = 3; is initialization! *?
+
+
+        </script>
+    </body>
+</html>
