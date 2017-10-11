@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <h1>Arrays In JSON</h1>
+        <p id="demo"></p>
+
+        <script>
+        
+        var myObj = {
+            "name": "Edwin",
+            "age": 290,
+            "cars": [
+                {
+                    "name": "Ford",
+                    "models": ["Fiesta","Focus", "Mustang"]
+                },
+                {
+                    "name": "BMW",
+                    "models": ["320","520"],
+                },
+                {
+                    "name": "Honda",
+                    "models": ["Civic", "Accord"]
+                }
+            ]
+            ,
+            "family": ["Edwin","Polly","Child"]
+        }
+
+        console.log(myObj.family[0]);
+
+        for (i in myObj.family) {
+            console.log(myObj.family[i]);
+        }
+
+        for (i = 0; i<myObj.family.length; i++) {
+            console.log(myObj.family[i]);
+        }
+
+        console.log("==========================================");
+        myObj.cars[2].models[1] = "Accord2";
+        for (i in myObj.cars) {
+            console.log(myObj.cars[i].name);
+            for (j in myObj.cars[i].models) {
+            console.log(myObj.cars[i].models[j]);
+            }
+        }
+        console.log("===========================================");
+        for ( i = 0; i < myObj.cars.length; i++) {
+            console.log(myObj.cars[i]);
+                
+        }
+        
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        </script>
+    </body>
+
+
+
+</html>
