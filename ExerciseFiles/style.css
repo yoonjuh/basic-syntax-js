@@ -62,7 +62,7 @@
   align-items: center;
   /*flex: 1 0 auto;*/
   border-radius: 4px;
-  background-color: #c79e17;
+  background-color: #17adc7;
   font-size: 6rem;
   color: #fff;
   cursor: pointer;
@@ -87,7 +87,7 @@
   align-items: center;
   flex: 0 0 auto;
   border-radius: 4px;
-  background-color: #773a14;
+  background-color: #147741;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .05), 0 2px 12px 0 rgba(0, 0, 0, .1);
   transition: box-shadow 200ms ease-out;
   color: #fff;
